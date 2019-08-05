@@ -1,24 +1,78 @@
-# README
+# ADM Connect
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An internal chat application, built for ADM, to facilitate interdepartmental communications.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+Install these gems
 
-* Database creation
+```
+gem install rails
+gem install bcrypt
+```
 
-* Database initialization
+### Installing
 
-* How to run the test suite
+Run bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install --without production
+```
 
-* Deployment instructions
+Setup database
 
-* ...
+```
+rails db:migrate
+rails db:seed
+```
+
+
+Then start the server
+
+```
+rails server
+```
+
+
+## Running the tests
+
+```
+rails test
+```
+
+## Deployment
+
+This was built to be run on Heroku.
+
+```
+heroku login
+```
+Follow the instructions to login, and then
+
+```
+heroku new
+```
+And then
+
+```
+heroku push origin master
+```
+Finally to setup the database run
+```
+heroku run rails db:migrate
+heroku run rails db:seed
+```
+
+## Built With
+
+* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
+* [Bootstrap](https://getbootstrap.com/) - CSS framework
+
+
+## License
+
+This project is licensed under the MIT License
