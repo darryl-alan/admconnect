@@ -56,21 +56,26 @@ Follow the instructions to login, and then
 ```
 heroku create
 ```
-And then
+Now to setup Action Cable to run on Heroku, follow this guide  (note that you need to have a verified Heroku account to add redistogo):
+
+https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable#deploying-our-application-to-heroku
+
+Then you can deploy, run
 
 ```
-heroku push origin master
+git push heroku master
 ```
-Finally to setup the database run
+Next, setup the database, run
 ```
 heroku run rails db:migrate
 heroku run rails db:seed
 ```
 
+
 ## Built With
 
 * [Ruby on Rails](https://rubyonrails.org/) - The web framework used
-* [Bootstrap](https://getbootstrap.com/) - CSS framework
+* [Semantic UI](https://semantic-ui.com/) - UI framework
 
 
 ## License
