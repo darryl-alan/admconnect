@@ -1,5 +1,21 @@
 @import "semantic-ui";
 
 .chatbox {
+  height: 65vh;
+}
+
+.chatbox > .content:not(.extra) {
   height: 60vh;
+  overflow: auto;
+}
+
+button[type="submit"] {
+  border: none;
+  padding: 0;
+  background: transparent;
+  margin-left: 10px;
+}
+
+button[type="submit"] > i {
+  border-radius: 0.28571429rem;
 }
